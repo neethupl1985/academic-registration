@@ -55,7 +55,7 @@ public class CourseController {
      * @param courseId object to add
      * @return ResponseEntity with appropriate status code and body
      */
-    @DeleteMapping(path = "delete/{courseId}")
+    @DeleteMapping(path = "/delete/{courseId}")
     public ResponseEntity<Object> deleteCourse(@PathVariable int courseId) {
         log.debug("Inside deleteCourse method");
         courseService.deleteCourse(courseId);
@@ -68,7 +68,7 @@ public class CourseController {
      * @param courseId id of the course
      * @return ResponseEntity with appropriate status code and Course Object
      */
-    @GetMapping(path = "read/{courseId}")
+    @GetMapping(path = "/read/{courseId}")
     public ResponseEntity<Object> readCourse(@PathVariable int courseId) {
         log.debug("Inside readCourse method");
         courseService.readCourse(courseId);
